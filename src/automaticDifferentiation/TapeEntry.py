@@ -9,7 +9,7 @@ class TapeEntry:
         self.valueBar = 0
 
     def __str__(self):
-        s = "TapeEntry: " + self.operationType + ", " + self.indexArg1 + ", " + self.indexArg2 + ": " + self.value + ", " + self.extraValue + ", " + self.valueBar;
+        s = "TapeEntry: " + self.operationType.name + ", " + str(self.indexArg1) + ", " + str(self.indexArg2) + ": " + str(self.value) + ", " + str(self.extraValue) + ", " + str(self.valueBar);
         return s
 
     def addValueBar(self, input):

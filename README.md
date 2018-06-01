@@ -14,4 +14,4 @@ The approaches include
 The main scripts which execute a performance comparison between the different approaches are
 1. 'test/BlackScholesDerivatives_SpeedComparison.py'
 
-The 'automaticDifferentiation' subfolder is mostly a python port of the java code accompanying the book [Algorithmic Differentiation In Finance Explained] (https://www.palgrave.com/gp/book/9783319539782) by Marc Henrard.
+The 'automaticDifferentiation' subfolder is mostly a python port of the java code accompanying the book Algorithmic Differentiation In Finance Explained by Marc Henrard.

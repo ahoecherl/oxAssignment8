@@ -9,8 +9,15 @@ class Tape:
         return self.size-1
 
     def __init__(self):
-        self.size=0
-        self.tapeList=[]
+        self.size = 0
+        self.tapeList = []
+
+    def __str__(self):
+        s = ''
+        for i in self.tapeList:
+            s += i.__str__()+"\n"
+        return s
 
     def clr(self):
-        self.__init__()
+        self.size = 0
+        self.tapeList = []

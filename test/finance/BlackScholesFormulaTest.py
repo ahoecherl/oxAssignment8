@@ -87,9 +87,9 @@ class BlackScholesFormulaTest(unittest.TestCase):
 
     def test_aaad(self):
         call = BSPrice_Analytical(*self.input, True)
-        aaad_price = BSPrice_AAAD(*self.input_aaad, True).value
-        aaad_derivatives = interpret(self.tape)
-        self.assertAlmostEqual(call['price'], aaad_price, places=8)
+        aaad_price = BSPrice_AAAD(*self.input_aaad, True)
+        aaad_derivatives = interpret(aaad_price.tape)
+        self.assertAlmostEqual(call['price'], aaad_price.value, places=8)
         self.assertAlmostEqual(call['derivatives'][0], aaad_derivatives[0], places=8)
         self.assertAlmostEqual(call['derivatives'][1], aaad_derivatives[1], places=8)
         self.assertAlmostEqual(-call['derivatives'][3], aaad_derivatives[3], places=8)
